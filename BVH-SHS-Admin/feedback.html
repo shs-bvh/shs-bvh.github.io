@@ -29,7 +29,7 @@
 			<div class="header-left">
 				<a href="index1.html" class="logo">
                     <img src="assets/img/logo1.png" width="115" height="45" alt=""> 
-                    
+
 				<!-- <span>BVH</span> -->
 				</a>
             </div>
@@ -167,15 +167,14 @@
                         <li>
                             <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
                         </li> -->
-                        <li class="active">
+                        <li>
                             <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Requests</span></a>
                         </li>
 
-                        
-                        <li>
+                        <li >
                             <a href="contactus.html"><i class="fa fa-phone"></i> <span>Contact Us</span></a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="feedback.html"><i class="fa fa-list"></i> <span>Feedback</span></a>
                         </li>
                         <!-- <li>
@@ -328,10 +327,10 @@
             <div class="content">
                 <div class="row">
                     <div class="col-sm-4 col-3">
-                        <h4 class="page-title">Requests</h4>
+                        <h4 class="page-title">Feedback</h4>
                         
                     
-                        <button style="margin-bottom: 10px;" onclick="generatePDF()">Generate Report as PDF</button>
+                        <!-- <button style="margin-bottom: 10px;" onclick="generatePDF()">Generate Report as PDF</button> -->
 
 
                     
@@ -368,16 +367,13 @@
 							<table class="table table-striped custom-table" id="invoice">
 								<thead>
 									<tr>
-										<th>Request ID</th>
-										<th>Patient Name</th>
-										<th>Age</th>
-										<th>Prescription Image</th>
-										<th>Department</th>
 										<th>Date</th>
-										<th>Time</th>
-                                        <th>Change Status</th>
-                                        <th>Status</th>
-                                        <th>Comments</th>
+                                        <th>Name</th>
+										<th>Email Id</th>
+                                        <th>Mobile no</th>
+                                        <th>Feedback type</th>
+                                        <th>Feedback Description</th>
+									
 
 
 										<th class="text-right">Action</th>
@@ -385,77 +381,30 @@
 								</thead>
 								<tbody id="myTable">
 									<tr>
-										<td>ORDERNO01</td>
+										<td>2020-07-05</td>
 										<td><img width="28" height="28" src="assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Khem Agarwal</td>
-										<td>21</td>
-										<td>prescription.jpg</td>
-										<td>Ayurveda</td>
-										<td>2020-06-30</td>
-										<td>10</td>
-                                        <td> <select onchange="report()" id="dept" name="dept" class="form-control">
-                                           
-                                            <option value="Unattended">Unattended</option>
-                                            <option value="Scrutiny">Scrutiny</option>
-                                            <option value="Info Awaited">Info Awaited</option>
-                                            <option value="Short Bill in Apex">Short Bill in Apex</option>
-                                            <option value="Out for Delivery">Out for Delivery</option>
-                                            <option value="Delivered">Delivered</option>
-                                            <option value="Cancelled">Cancelled</option>
-                                            <option value="Out of Stock">Out of Stock</option>
-                                            <option value="Payment Received in Apex">Payment Received in Apex</option>
-                                            <option value="Not Applicable N/A">Not Applicable N/A</option>
-
-                                          </select></td>
-                                          <td><span id="finalstatus" class="custom-badge status-red">Unattended</span></td>
-                                          <td><input type="text"></td>
-
-                                          <script>
-                                          function report()
-                                          {
-                                        document.getElementById("finalstatus").innerText=document.getElementById("dept").value;
-                                          }
-                                          </script>
-
+										<td>khemagarwal1@gmail.com</td>
+										<td>+91 8879953141</td>
+										<td>Bug Report</td>
+										<td>Your website is not working on internet explorer.  </td>
+										
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
 												<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Save</a>
+													<a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Reply</a>
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_appointment"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
 												</div>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<td>ORDERNO02</td>
-										<td><img width="28" height="28" src="assets/img/user.jpg" class="rounded-circle m-r-5" alt="">Fatema Ujjainwala</td>
-										<td>21</td>
-										<td>pres.jpg</td>
-										<td>Homeopathy</td>
-										<td>2020-06-28</td>
-										<td>11:00am</td>
-                                        <td> <select id="dept1"  onchange="report1()" name="dept" class="form-control">
-                                            <option value="Unattended">Unattended</option>
-                                            <option value="Scrutiny">Scrutiny</option>
-                                            <option value="Info Awaited">Info Awaited</option>
-                                            <option value="Short Bill in Apex">Short Bill in Apex</option>
-                                            <option value="Out for Delivery">Out for Delivery</option>
-                                            <option value="Delivered">Delivered</option>
-                                            <option value="Cancelled">Cancelled</option>
-                                            <option value="Out of Stock">Out of Stock</option>
-                                            <option value="Payment Received in Apex">Payment Received in Apex</option>
-                                            <option value="Not Applicable N/A">Not Applicable N/A</option>
-                                          </select></td>
-
-                                        <td><span id="finalstatus1" class="custom-badge status-green">Under Scrunity</span></td>
-                                        <td><input type="text"></td>
-                                        
-                                        <script>
-                                            function report1()
-                                            {
-                                          document.getElementById("finalstatus1").innerText=document.getElementById("dept1").value;
-                                            }
-                                            </script>
+                                        <td>2020-07-06</td>
+										<td><img width="28" height="28" src="assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Fatema Ujjainwala</td>
+										<td>fatemaujjainwala@gmail.com</td>
+										<td>+91 123456789</td>
+										<td>Comments</td>
+										<td>Whole service is great just one feedback regarding that delivery should be more faster. </td>
                                             <script>
                                                 $(document).ready(function(){
                                                   $("#myInput").on("keyup", function() {
@@ -464,13 +413,7 @@
 
                                                     $("#myTable tr").filter(function() {
                                                       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                                                      $("#datefilter").on("keyup change", function() {
-                                                    var value = $(this).val().toLowerCase();
-                                                    console.log(value);
-                                                    $("#myTable tr").filter(function() {
-                                                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                                                    });
-                                                  });
+                                                 
                                                     });
                                                   });
                                             
@@ -481,14 +424,23 @@
 											<div class="dropdown dropdown-action">
 												<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 												<div class="dropdown-menu dropdown-menu-right">
-													<a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Save</a>
+													<a class="dropdown-item" href="#"><i class="fa fa-pencil m-r-5"></i> Reply</a>
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_appointment"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
 												</div>
 											</div>
 										</td>
 									</tr>
 								</tbody>
-							</table>
+                            </table>
+                            <script>
+                                     $("#datefilter").on("keyup change", function() {
+                                                    var value = $(this).val().toLowerCase();
+                                                    console.log(value);
+                                                    $("#myTable tr").filter(function() {
+                                                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                                    });
+                                                  });
+                            </script>
 						</div>
 					</div>
                 </div>
