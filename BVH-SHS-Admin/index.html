@@ -15,46 +15,11 @@
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
-	  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
-  <script type="text/javascript" >window.ENV_VARIABLE = 'https://developer.here.com'</script><script src='https://developer.here.com/javascript/src/iframeheight.js'></script>
+	
 </head>
 
 <body>
 	
-	<script>
-		
-		// Instantiate a map and platform object:
-var platform = new H.service.Platform({
-  'apikey': 'gBtUA6HNv23XXvrblwLZZRAScPiyxizR1Eqyk91dbzw'
-});
-
-// Get an instance of the geocoding service:
-var service = platform.getSearchService();
-
-// Call the geocode method with the geocoding parameters,
-// the callback and an error callback function (called if a
-// communication error occurs):
-service.geocode({
-  q: '200 S Mathilda Ave, Sunnyvale, CA'
-}, (result) => {
-	alert(result);
-	alert("dddd");
-  // Add a marker for each location found
-  result.items.forEach((item) => {
-	  alert("sd"+item.position.getLatitude());
-    map.addObject(new H.map.Marker(item.position));
-  });
-}, alert);
-
-		
-		
-		
-		
-		
-	</script>
 	
     <div class="main-wrapper  account-wrapper">
         <div class="account-page">
