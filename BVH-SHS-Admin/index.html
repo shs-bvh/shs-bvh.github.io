@@ -21,13 +21,14 @@
 		
 	<script>
 		navigator.geolocation.getCurrentPosition(success => {
-			alert(huuu);
+			alert("huuu");
   /* Do some magic. */
 }, failure => {
   if (failure.message.startsWith("Only secure origins are allowed")) {
     // Secure Origin issue.
-	  alert(aaa);
+	  alert("aaa");
   }
+			alert("eee");
 });
 	</script>
     <div class="main-wrapper  account-wrapper">
