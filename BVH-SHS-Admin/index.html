@@ -20,16 +20,17 @@
 <body>
 		
 	<script>
-		navigator.geolocation.getCurrentPosition(success => {
-			alert("huuu");
-  /* Do some magic. */
-}, failure => {
-  if (failure.message.startsWith("Only secure origins are allowed")) {
-    // Secure Origin issue.
-	  alert("aaa");
-  }
-			alert("eee");
-});
+	navigator.geolocation.getCurrentPosition(
+    function(position) {
+         alert("Lat: " + position.coords.latitude + "\nLon: " + position.coords.longitude);
+    },
+    function(error){
+         alert(error.message);
+    }, {
+         enableHighAccuracy: true
+              ,timeout : 5000
+    }
+);
 	</script>
     <div class="main-wrapper  account-wrapper">
         <div class="account-page">
