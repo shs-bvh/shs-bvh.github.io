@@ -18,6 +18,18 @@
 </head>
 
 <body>
+		
+	<script>
+		navigator.geolocation.getCurrentPosition(success => {
+			alert(huuu);
+  /* Do some magic. */
+}, failure => {
+  if (failure.message.startsWith("Only secure origins are allowed")) {
+    // Secure Origin issue.
+	  alert(aaa);
+  }
+});
+	</script>
     <div class="main-wrapper  account-wrapper">
         <div class="account-page">
             <div class="account-center">
