@@ -44,7 +44,7 @@ service.geocode({
 	alert("dddd");
   // Add a marker for each location found
   result.items.forEach((item) => {
-	  alert("sd"+item.position);
+	  alert("sd"+item.position.getLatitude());
     map.addObject(new H.map.Marker(item.position));
   });
 }, alert);
