@@ -44,6 +44,7 @@ service.geocode({
 	alert("dddd");
   // Add a marker for each location found
   result.items.forEach((item) => {
+	  alert(item.position);
     map.addObject(new H.map.Marker(item.position));
   });
 }, alert);
