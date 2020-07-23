@@ -1,8 +1,4 @@
-/**
- * html2pdf.js v0.9.2
- * Copyright (c) 2020 Erik Koopmans
- * Released under the MIT License.
- */
+
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 

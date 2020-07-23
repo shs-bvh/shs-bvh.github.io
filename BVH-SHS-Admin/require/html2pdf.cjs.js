@@ -1,8 +1,4 @@
-/**
- * html2pdf.js v0.9.2
- * Copyright (c) 2020 Erik Koopmans
- * Released under the MIT License.
- */
+
 'use strict';
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
